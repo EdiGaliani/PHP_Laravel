@@ -8,8 +8,11 @@
 </head>
 <body>
     
+    <?php echo $__env->make('nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
     <?php echo $__env->yieldContent('content'); ?>
 
+    <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <script src="<?php echo e(asset('assets/bootstrap/bootstrap.bundle.min.js')); ?>"></script>
 </body>

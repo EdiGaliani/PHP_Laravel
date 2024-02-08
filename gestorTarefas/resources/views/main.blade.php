@@ -1,6 +1,6 @@
+@extends('templates/main_layout')
 
-
-<?php $__env->startSection('content'); ?>
+@section('content')
 
 <div class="container">
     <div class="row">
@@ -22,6 +22,4 @@
     </div>
 </div>
 
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('templates/main_layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\gestorTarefas\resources\views/main.blade.php ENDPATH**/ ?>
+@endsection
