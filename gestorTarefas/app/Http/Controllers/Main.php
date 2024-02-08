@@ -3,16 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Main extends Controller
 {
     public function index() {
 
+        echo 'Gestor de Tarefas';
+    }
+
+    public function login() {
         $data = [
-            'title' => 'Olá Laravel 10!',
-            'description' => 'Aprendendo Laravel 10'
+            'title' => 'Login'
         ];
 
-        return view('main', $data);
+        return view('login_form', $data);
     }
+
+    public function login_submit() {
+        echo 'Submissão do Login';
+    }
+
 }

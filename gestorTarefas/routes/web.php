@@ -15,13 +15,8 @@ use App\Http\Controllers\Main;
 |
 */
 
-Route::get('/', function () {
-    try {
-        DB::connection()->getPdo();
-        echo "Conexão efetuada com sucesso. " . DB::connection()->getDatabaseName();
-    } catch (\Exception $e) {
-        die('Não foi possível ligar à base de dados. Erro:' . $e->getMessage());
-    }
-});
+Route::get('/', [Main::class, 'index'])->name('index');
 
-Route::get('/main', [Main::class, 'index']);
+// Login routes
+Route::get('/login', [Main::class, 'login'])->name('login');
+Route::get('/login_submit', [Main::class, 'login_submit'])->name('login_submit');
